@@ -1,11 +1,14 @@
 //your JS code here. If required.
-function updateSize(){
-	const widthElement = document.getElementById("width");
-	const heightElement = document.getElementById("height");
+function updateWindowSize() {
+        const sizeInfoDiv = document.getElementById("sizeInfo");
+        const width = window.innerWidth;
+        const height = window.innerHeight;
 
-	widthElement.textContent = window.innerWidth;
-	heightElement.textContent = window.innerHeight;
-}
+        sizeInfoDiv.innerHTML = `<h1>Width: ${width} and Height: ${height}</h1>`;
+      }
 
-window.addEventListener("load", updateSize);
-window.addEventListener("resize", updateSize);
+      // Initial call to display the size when the page is first loaded
+      updateWindowSize();
+
+      // Update the size when the window is resized
+      window.addEventListener("resize", updateWindowSize);
