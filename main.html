@@ -4,24 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Screen Size</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div id="sizeInfo">
+        <!-- Placeholder for dynamically updated screen size -->
         <h1>Width: 665 and Height: 359</h1>
     </div>
-    <script type="text/javascript">
-        function updateSize() {
-            let width = window.innerWidth;
-            let height = window.innerHeight;
-            let div = document.getElementById("sizeInfo");
-            div.innerHTML = `<h1>Width: ${width} and Height: ${height}</h1>`;
-        }
-
-        // Call the function once on load
-        updateSize();
-
-        // Add event listener to update size on window resize
-        window.addEventListener("resize", updateSize);
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
